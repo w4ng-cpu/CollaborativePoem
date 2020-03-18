@@ -48,16 +48,6 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 		this.addKeyListener(this);
 	}
 
-	public int getWidth()
-	{
-		return arenaWidth;
-	}
-
-	public int getHeight()
-	{
-		return arenaHeight;
-	}
-
 	public void run() {
 		try {
 			while (true) {
@@ -272,9 +262,9 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 	 * This method causes your program to delay for 1/50th of a second. You'll find this useful if you're trying to animate your application.
 	 *
 	 */
-	public void pause(int milisec)
+	public void pause()
 	{
-		try { Thread.sleep(milisec); }
+		try { Thread.sleep(20); }
 		catch (Exception e) {};
 	}
 
