@@ -10,6 +10,10 @@ import java.util.*;
  */
 public class GameArena extends JFrame implements Runnable, KeyListener
 {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 	// Size of playarea
 	private int arenaWidth;
 	private int arenaHeight;
@@ -35,7 +39,7 @@ public class GameArena extends JFrame implements Runnable, KeyListener
 	 */
 	public GameArena(int width, int height)
 	{
-		this.setTitle("Let's Play!");
+		this.setTitle("Space Invaders");
 		this.setSize(width, height);
 		this.setResizable(false);
 		this.setBackground(Color.BLACK);

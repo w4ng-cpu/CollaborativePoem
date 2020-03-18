@@ -1,16 +1,23 @@
-import java.util.Random;
+//import java.util.Random;
 
-public class GameDriver
+public class Driver
 {
     public static void main(String[] args)
     {
-        GameArena game = new GameArena(200, 250);
+        GameArena game = new GameArena(500, 500);
+        Ball circle = new Ball(100, 250, 0, 0, 10, "WHITE");
+        game.addBall(circle);
+        Rectangle square = new Rectangle(100, 100, 10, 10, "WHITE");
+        game.addRectangle(square);
+
+/*
         Random rand = new Random();
         Ball[] ballArray = new Ball[5];
+*/
+        Shooter player = new Shooter(250, 250, "WHITE");
+        player.addTo(game);
 
-        Ball b = new Ball(100, 250, 4, 6, 10, "GREEN");
-        game.addBall(b);
-
+/*
         for (int i = 0; i < 5; i++)
         {
             ballArray[i] = new Ball(100, 250, 0, 0, 10, "WHITE");
@@ -23,14 +30,13 @@ public class GameDriver
 
         while (true)
         {
-            b.movement(game.getWidth(), game.getHeight());
-
             for (int i = 0; i < 5; i++)
             {
-                ballArray[i].movement(game.getWidth(), game.getHeight());
+                ballArray[i].movement(500, 500);
             }
 
             game.pause();
         }
+*/
     }
 }
